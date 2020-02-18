@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --mode development --open",
-    "build": "webpack --mode production && copy dist\\portfo\\index.js ..\\nodeServer\\portfo\\"
+    "build": "webpack --mode production && copy main\\dist\\bundle.js ..\\nodeServer\\main\\ "
   },
   "repository": {
     "type": "git",
