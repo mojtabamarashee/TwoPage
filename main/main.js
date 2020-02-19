@@ -9,16 +9,16 @@ class Main extends React.Component {
 	}
 	componentDidMount() {
 		axios.get('/parTree').then(response => {
-			this.setState({arzesh: response.arzesh});
+			this.setState({arzesh: Math.round(response.data.arzesh / 1e10 * 100) / 100 + 'B'}, () => console.log('arzesh = ', response.data.arzesh));
 		});
 	}
 
 	render() {
 		return (
-			<div>
+			<div dir="RTL">
 				<span
 					style={{
-                        color:'blue',
+						color: 'blue',
 						fontFamily: 'Courier New, Courier, monospace',
 						fontWeight: 'bold',
 						fontSize: '16px',
