@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --mode development --open",
-    "build": "webpack --mode production && copy main\\dist\\bundle.js ..\\nodeServer\\main\\ "
+    "build": "webpack --mode production && copy main\\dist\\bundle.js ..\\nodeServer\\main\\ && copy symbol\\dist\\bundle.js ..\\nodeServer\\symbol\\ "
   },
   "repository": {
     "type": "git",
@@ -62,6 +62,7 @@
     "@material-ui/icons": "^4.5.1",
     "babel-eslint": "^10.0.2",
     "bootstrap": "^4.3.1",
+    "d3": "^5.15.0",
     "fs": "0.0.1-security",
     "line-reader": "^0.4.0",
     "numeral": "^2.0.6",

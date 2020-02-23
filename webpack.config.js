@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-	entry: {'main': './main/main.js'},
+	entry: {'main': './main/main.js', 'symbol': './symbol/Symbol.js'},
 	output: {
 		path: path.resolve(__dirname),
 		filename: '[name]/dist/bundle.js',
@@ -20,13 +20,14 @@ module.exports = {
 				test: /\.css$/,
 				use: ['style-loader', 'css-loader'],
 			},
+			
 		],
 	},
 	resolve: {extensions: ['*', '.js', '.jsx']},
 	devServer: {
-		contentBase: path.join(__dirname, 'public/'),
+		contentBase: path.join(__dirname, 'symbol/public'),
 		port: 3000,
-		publicPath: 'http://localhost:3000/dist/',
+		publicPath: 'http://localhost:3000/symbol/dist/',
 		//hotOnly: true,
 		open: true,
 		historyApiFallback: true,
